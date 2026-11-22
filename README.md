@@ -2,9 +2,6 @@
 
 Colección de implementaciones de diseño de software avanzado. Este proyecto explora los límites de la Orientación a Objetos clásica, extendiendo el lenguaje base mediante **Metaprogramación en Ruby** y construyendo motores de reglas libres de efectos colaterales mediante **Programación Funcional Pura en Scala**.
 
-![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
-![Scala](https://img.shields.io/badge/Scala-DC322F?style=for-the-badge&logo=scala&logoColor=white)
-
 ## 📑 Índice
 - [El Problema y la Motivación](#problema)
 - [Tech Stack y Paradigmas](#tech-stack)
@@ -25,9 +22,9 @@ Este proyecto se divide en dos módulos independientes que atacan estos problema
 <a name="tech-stack"></a>
 ## 🏗️ Tech Stack y Paradigmas
 
-*   ![Ruby](https://img.shields.io/badge/-Ruby_3-CC342D?style=flat-square&logo=ruby&logoColor=white) **Core de Extensión (Stateful OOP & MOP):** Utilización del *Meta-Object Protocol* (MOP) de Ruby. El framework evalúa y altera clases dinámicamente en tiempo de ejecución (Monkey-patching y Hooks) manteniendo el estado interno de los objetos.
-*   ![Scala](https://img.shields.io/badge/-Scala_2-DC322F?style=flat-square&logo=scala&logoColor=white) **Dominio Computacional (Stateless / Functional):** Lenguaje altamente tipado ejecutado sobre la JVM. Orquesta el dominio utilizando *Algebraic Data Types (ADT)* y *Pattern Matching* para resolver la lógica funcional sin almacenar estado en los modelos.
-*   ![Testing](https://img.shields.io/badge/-RSpec_&_ScalaTest-000000?style=flat-square) **Quality Assurance (TDD):** Ecosistemas de testing unitario riguroso aislando invariantes, precondiciones y comportamiento matemático puro.
+*   **Core de Extensión en Ruby 3 (Stateful OOP & MOP):** Utilización del *Meta-Object Protocol* (MOP) de Ruby. El framework evalúa y altera clases dinámicamente en tiempo de ejecución (Monkey-patching y Hooks) manteniendo el estado interno de los objetos.
+*   **Dominio Computacional en Scala 3 (Stateless / Functional):** Lenguaje altamente tipado ejecutado sobre la JVM. Orquesta el dominio utilizando *Algebraic Data Types (ADT)* y *Pattern Matching* para resolver la lógica funcional sin almacenar estado en los modelos.
+*   **Quality Assurance:** RSpec (Ruby) y ScalaTest (Scala) como ecosistemas de testing unitario riguroso aislando invariantes, precondiciones y comportamiento matemático puro.
 
 <a name="features"></a>
 ## ⚡ Features Clave
@@ -37,7 +34,7 @@ Este proyecto se divide en dos módulos independientes que atacan estos problema
 *   **Evaluación de Invariantes Declarativas:** Creación de un Domain-Specific Language (DSL) interno en Ruby que permite declarar reglas de consistencia de negocio a nivel clase, bloqueando ejecuciones que puedan dejar al objeto en un estado corrupto.
 
 ### Motor Híbrido Objeto-Funcional (Scala)
-*   **Pipelines de Computación Inmutable (Stateless):** Toda transformación en el dominio matemático de los torneos genera un nuevo estado. Las funciones no producen *Side Effects*, garantizando determinismo absoluto para su eventual paralelización.
+*   **Pipelines de Computación Inmutable (Stateless):** Toda transformación en el dominio matemático de los torneos genera un nuevo estado. Las funciones no producen *Side Effects*, lo que facilita su eventual paralelización.
 *   **Pattern Matching Avanzado:** Evaluación estructural de las entidades mediante tipos algebraicos y polimorfismo paramétrico, resolviendo reglas de negocio complejas (eliminatorias, penalizaciones, vetos) con alta cohesividad funcional.
 *   **Funciones de Orden Superior:** Tratamiento de las funciones lógicas y eventos como ciudadanos de primera clase, permitiendo componer dinámicamente las rondas y torneos mediante combinadores funcionales (`map`, `fold`, `filter`).
 
